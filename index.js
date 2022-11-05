@@ -21,3 +21,15 @@ let findNumbers = randomNumbers.find((number,index)=>{
 });
     console.log(findNumbers);
  
+//get placeholder data from json placeholder
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(data => {
+        console.log(data);
+
+        let specifinder = data.find((user) =>{
+            return user.id === 5;
+        });
+        console.log(specifinder);
+  });
+  
