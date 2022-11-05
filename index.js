@@ -30,6 +30,14 @@ fetch('https://jsonplaceholder.typicode.com/users')
         let specifinder = data.find((user) =>{
             return user.id === 5;
         });
+        
         console.log(specifinder);
+        
+        let filterUser = data.filter((user) =>{
+            return user.id >5;
+        });
+        console.log(filterUser);
+
+        
   });
   
